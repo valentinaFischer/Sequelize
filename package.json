@@ -1,0 +1,22 @@
+{
+  "name": "sequelize",
+  "version": "1.0.0",
+  "description": "Simples projeto utilizando Sequelize visando estudos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 3000"
+  },
+  "keywords": [],
+  "author": "Valentina Fischer Martins Pacheco (https://github.com/valentinaFischer)",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.21.0",
+    "express-handlebars": "^8.0.1",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.4"
+  }
+}
