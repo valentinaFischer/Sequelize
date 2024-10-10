@@ -4,11 +4,11 @@ const sequelize = new Sequelize('nodesequelize2', 'root', '', {
     dialect: 'mysql'
 });
 
-try {
+/*try {
     sequelize.authenticate();
     console.log('Conectamos ao Sequelize!');
 } catch (error) {
     console.log('Não foi possível se conectar: ', error);
-}
+}*/
 
 module.exports = sequelize;
