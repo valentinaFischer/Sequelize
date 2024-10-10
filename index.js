@@ -35,7 +35,7 @@ app.post('/users/create', async (req, res) => {
     if(newsletter === 'on') { // Pois vem como 'on' se estiver marcada
         newsletter = true;
     } else {
-        newsletter = false;
+        newsletter = false; // Opcional
     }
 
     await User.create({name, occupation, newsletter});
