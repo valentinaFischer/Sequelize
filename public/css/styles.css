@@ -96,7 +96,7 @@ h1 {
     justify-content: space-between;
 }
 
-.actions a, .actions input {
+.actions a, .actions input, .adress-list input {
     border: 1px solid;
     border-radius: 5px;
     text-decoration: none;
@@ -111,7 +111,7 @@ h1 {
     color: #004085;
 }
 
-.actions .delete-btn {
+.actions .delete-btn, .adress-list input {
     border-color: #721c24;
     color: #721c24;
 }
@@ -121,10 +121,43 @@ h1 {
     color: white;
 }
 
-.actions .delete-btn:hover {
+.actions .delete-btn:hover, .adress-list input:hover {
     background-color: #721c24;
     color: white;
 }
 
-/* USER */
+/* ADRESS */
 
+.adress-container {
+    max-width: 1000px;
+    margin: 1em auto;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    padding-bottom: 200px;
+}
+
+.adress-container h2 {
+    margin-bottom: 1em;
+}
+
+.adress-container form {
+    max-width: 300px;
+}
+
+.adress-list {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #CCC;
+    max-width: 100%;
+}
+
+.adress-list p {
+    margin-top: .3em;
+    border-top: 1px solid #ccc;
+    padding-top: .5em;
+}
+
+.adress-list form {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}

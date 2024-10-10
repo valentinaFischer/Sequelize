@@ -1,0 +1,53 @@
+<h1>Editando {{user.name}}</h1>
+<form action="/users/update" class="form" method="POST">
+<input type="hidden" name="id" value="{{user.id}}">
+    <div class="form-control">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" placeholder="Insira seu nome..." value="{{user.name}}">
+    </div>
+    <div class="form-control">
+        <label for="occupation">Profissão:</label>
+        <input type="text" name="occupation" placeholder="Insira sua profissão..." value="{{user.occupation}}">
+    </div>
+    <div class="form-control form-checkbox">
+        {{#if user.newsletter}}
+            <input type="checkbox" name="newsletter" checked>
+        {{else}}
+            <input type="checkbox" name="newsletter">
+        {{/if}}
+        <label for="newsletter">Enviar promoções?</label>
+    </div>
+    <button type="submit">Editar</button>
+</form>
+
+<div class="adress-container">
+    <h2>Endereço:</h2>
+    <form action="/adress/create" method="POST">
+        <input type="hidden" name="UserId" value="{{user.id}}">
+        <div class="form-control">
+            <label for="street">Rua:</label>
+            <input type="text" name="street" placeholder="Digite sua rua...">
+        </div>
+        <div class="form-control">
+            <label for="number">Número:</label>
+            <input type="text" name="number" placeholder="Digite seu número...">
+        </div>
+        <div class="form-control">
+            <label for="city">Cidade:</label>
+            <input type="text" name="city" placeholder="Digite sua cidade...">
+        </div>
+        <input type="submit" value="Cadastrar Endereço">
+    </form>
+
+    <div class="adress-list">
+        <h2>Lista de Endereços:</h2>
+        {{#each user.Adresses}}
+            <p>#{{this.id}} - {{this.city}}, Rua {{this.street}}, {{this.number}}</p>
+            <form action="/adress/delete" method="post">
+                <input type="hidden" name="UserId" value="{{this.UserId}}">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <input type="submit" value="Deletar">
+            </form>
+        {{/each}}
+    </div>
+</div>
